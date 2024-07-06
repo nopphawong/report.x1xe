@@ -1,0 +1,23 @@
+.ms-1 {
+  margin-left: 0.25rem;
+}
+.ms-2 {
+  margin-left: 0.5rem;
+}
+
+.rotation {
+  animation: rotation 1s linear infinite;
+}
+
+.icon-rotation {
+  animation: rotation 10s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
