@@ -68,7 +68,6 @@ abstract class BaseController extends Controller
         $this->viewData['version'] = 'v1.2';
         $this->viewData['path'] = $path;
         $this->viewData['last_path'] = $path_array[count($path_array) - 1];
-        
     }
 
     public function addJs($js, $key = "includes_js")
@@ -84,8 +83,9 @@ abstract class BaseController extends Controller
     }
     public function usePrimevue()
     {
-        $this->addCss("https://unpkg.com/primevue/resources/themes/lara-light-green/theme.css");
-        $this->addJs("https://unpkg.com/primevue/core/core.min.js", "vuejs");
+        // $this->addCss("https://unpkg.com/primevue/resources/themes/lara-light-green/theme.css");
+        $this->addJs("https://unpkg.com/primevue@4.0.0/umd/primevue.min.js", "vuejs");
+        $this->addJs("https://unpkg.com/@primevue/themes@4.0.0/umd/aura.min.js", "vuejs");
     }
     public function usePrimevueLib($name)
     {

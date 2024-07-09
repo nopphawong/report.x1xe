@@ -31,10 +31,10 @@ class Pages extends BaseController
         );
         session()->set((array) $session_data);
         $this->usePrimevue();
-        $use_libs = array('datatable', 'column');
-        foreach ($use_libs as $lib) {
-            $this->usePrimevueLib($lib);
-        }
+        // $use_libs = array('datatable', 'column');
+        // foreach ($use_libs as $lib) {
+        //     $this->usePrimevueLib($lib);
+        // }
 
         switch ($type) {
             case 'registered':

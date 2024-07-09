@@ -188,10 +188,6 @@
 
 <script>
     const userBox = Vue.createApp({
-        components: {
-            "Column": primevue.column,
-            "Datatable": primevue.datatable,
-        },
         data() {
             return {
                 loading: false,
@@ -304,7 +300,13 @@
             await this.list()
         }
     })
-    userBox.use(primevue.config.default)
+    userBox.use(PrimeVue.Config, {
+        theme: {
+            preset: PrimeVue.Themes.Aura
+        }
+    })
+    userBox.component(`Datatable`, PrimeVue.DataTable)
+    userBox.component(`Column`, PrimeVue.Column)
     userBox.mount('#user-box')
 </script>
 
